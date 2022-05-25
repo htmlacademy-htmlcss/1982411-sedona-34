@@ -105,22 +105,25 @@
           <button class="button" type="submit">Применить</button>
           <button class="button reset" type="reset">Сбросить</button>
         </form>
-        <h3 class="visually-hidden">Найдено гостиниц: 38</h3>
-        <!--вот тут не уверена, размечать это как заголовок или это является чем-то иным (что по результатам фильтра найдено 38 гостиниц)-->
-        <select class="select-control" aria-label="Сортировка">
-          <option value="cheap" selected>Сначала дешёвые</option>
-          <option value="expensive">Сначала дорогие</option>
-          <option value="popular">Сначала популярные</option>
-        </select>
-        <a class="button button-selected" href="#">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a class="button" href="#">
-          <span class="visually-hidden">Показать карточку на весь экран</span>
-        </a>
-        <a class="button" href="#">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <div class="filter-results">
+          <h3 class="filter-results-title">Найдено гостиниц: 38</h3>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="cheap" selected>Сначала дешёвые</option>
+            <option value="expensive">Сначала дорогие</option>
+            <option value="popular">Сначала популярные</option>
+          </select>
+          <div class="filter-results-view">
+            <a class="button button-selected" href="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+            <a class="button" href="#">
+              <span class="visually-hidden">Показать карточку на весь экран</span>
+            </a>
+            <a class="button" href="#">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </div>
+        </div>
         <ul class="hotels-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -135,7 +138,7 @@
               <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
             </div>
             <div class="rating">
-            <span>Рейтинг: 8,5</span>
+              <span>Рейтинг: 8,5</span>
             </div>
           </li>
           <li class="hotel-card">
@@ -151,7 +154,7 @@
               <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
             </div>
             <div class="rating">
-            <span>Рейтинг: 9,2</span>
+              <span>Рейтинг: 9,2</span>
             </div>
           </li>
           <li class="hotel-card">
@@ -167,7 +170,7 @@
               <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
             </div>
             <div class="rating">
-            <span>Рейтинг: 6,9</span>
+              <span>Рейтинг: 6,9</span>
             </div>
           </li>
           <li class="hotel-card">
@@ -183,7 +186,7 @@
               <span>&#9734;</span><span>&#9734;</span>
             </div>
             <div class="rating">
-            <span>Рейтинг: 5,0</span>
+              <span>Рейтинг: 5,0</span>
             </div>
           </li>
         </ul>
@@ -200,25 +203,24 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">...</a>
-            </li>
-              <li class="pagination-item">
-                <a class="pagination-link" href="#">10</a>
-              </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+          </li>
         </ul>
         <label>
-         Гостиниц на странице:
-        <select class="select-control" aria-label="Сортировка">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4" selected>4</option>
-        </select>
-      </label>
+          Гостиниц на странице:
+          <select class="select-control" aria-label="Сортировка">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+          </select>
+        </label>
       </section>
-    </main>
-    <section class="newsletters-subscribtion">
+      <section class="newsletters-subscribtion">
       <h2 class="newsletters-subscribtion-title">Подпишитесь на рассылку</h2>
       <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="newsletters-subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -228,7 +230,8 @@
         </button>
       </form>
     </section>
-    <footer class="page-footer">
+    </main>
+   <footer class="page-footer">
       <section class="footer-social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="footer-social-list">
