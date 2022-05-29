@@ -28,88 +28,121 @@
   font-weight: 700;
   src: url("/fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
-  }
+}
 
- body {
+body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  background-color: #FFFFFF;
- }
+  background-color: #ffffff;
+}
 
- .navigation-link {
+.button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+}
+
+.navigation-button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.subscribe-button {
+  background-color: #82B3D3;
+}
+
+.navigation-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
   text-decoration: none;
   color: inherit;
- }
+}
 
- .welcome-image {
+.welcome-image {
   background-image: url("/images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
- }
+}
 
- .advantages {
-  text-align: center;
- }
-
- .advantages h2 {
+h2 {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  }
+  text-align: center;
+}
 
- .advantages p {
+p {
   font-size: 22px;
   line-height: 26px;
-  }
+  text-align: center;
+}
 
-  .advantages-title {
+.advantages {
+  text-align: center;
+}
+
+.advantages-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  }
+}
 
-  .advantages-list p {
-    font-size: 18px;
-    line-height: 21px;
-  }
+.advantages-list p {
+  font-size: 18px;
+  line-height: 21px;
+}
 
-  .advantages-item-special {
-    background-color: #82B3D3;
-    color: #FFFFFF
-  }
+.advantages-item-special {
+  background-color: #82b3d3;
+  color: #ffffff;
+}
 
-  .advantages-item-3 {
-    background-color: rgba(131, 179, 211, 0.12);
-  }
+.advantages-item-3,
+.advantages-item-5 {
+  background-color: rgba(131, 179, 211, 0.12);
+}
 
-  .advantages-item-4 {
-    background-color: rgba(131, 179, 211, 0.2);
-  }
+.advantages-item-4 {
+  background-color: rgba(131, 179, 211, 0.2);
+}
 
-  .advantages-item-5 {
-    background-color: rgba(131, 179, 211, 0.12);
-  }
+.advantages-sublist {
+  color: #000000;
+}
 
-  .advantages-sublist {
-    color: #000000;
-  }
+/*не могу понять, по какой причине корректно не отображается заливка в .advantages-subitem-1 и.advantages-subitem-3, хотя с .advantages-subitem-2 все ок*/
+.advantages-subitem-1,
+.advantages-subitem-3 {
+  background-color: rgba(131, 179, 211, 0.12);
+}
 
-  .advantages-subitem-1 {
-    background-color: rgba(131, 179, 211, 0.12);
-  }
+.advantages-subitem-2 {
+  background-color: #ffffff;
+}
 
-  .advantages-subitem-2 {
-    background-color: #FFFFFF;
-  }
+.newsletters-subscribtion {
+  color: #ffffff;
+  background-image: url("/images/subcribtion-background-index.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 
-  .advantages-subitem-3 {
-    background-color: rgba(131, 179, 211, 0.12);
-  }
+.contacts-phone {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #333333;
+}
