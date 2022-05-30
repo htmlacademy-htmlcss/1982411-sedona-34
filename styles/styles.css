@@ -45,7 +45,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #756157;
 }
 
@@ -55,7 +55,34 @@ body {
 }
 
 .subscribe-button {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
+}
+
+.button-apply {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
+}
+
+.button-reset {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  background-color: transparent;
+}
+
+.hotel-card-button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button-favourites {
+  background-color: #82b3d3;
+}
+
+.button-favourites-selected {
+  background-color: #7db54f;
 }
 
 .navigation-link {
@@ -138,11 +165,102 @@ p {
   background-repeat: no-repeat;
 }
 
+.catalog-newsletters-subscribtion {
+  color: #000000;
+  background-image: none;
+}
+
+input {
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #f2f2f2;
+}
+
 .contacts-phone {
   font-style: normal;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
+  /*почему не срабатывает text-decoration: none;?*/
   text-decoration: none;
-  color: #333333;
+  color: #000000;
+}
+
+.filter-styles {
+  color: #ffffff;
+  background-image: url("/images/catalog/catalog-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.inner-header-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.catalog-filter-item {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.filter-results-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.select-control,
+.select-control-label {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotel-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  /*почему не срабатывает text-decoration: none;?*/
+  color: #000000;
+}
+
+.hotel-card-type,
+.hotel-card-price {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+.pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #f2f2f2;
 }
