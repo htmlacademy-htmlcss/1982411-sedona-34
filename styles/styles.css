@@ -150,6 +150,7 @@ p {
 
 .newsletters-subscribtion {
   color: #ffffff;
+  background-color: #756157;
   background-image: url("/images/subcribtion-background-index.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -157,6 +158,7 @@ p {
 
 .catalog-newsletters-subscribtion {
   color: #000000;
+  background-color: #ffffff;
   background-image: none;
 }
 
@@ -166,18 +168,20 @@ input {
   background-color: #f2f2f2;
 }
 
-.contacts-phone {
-  font-style: normal;
+.contacts {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
-  /*почему не срабатывает text-decoration: none;?*/
+}
+
+.contacts-phone {
   text-decoration: none;
   color: #000000;
 }
 
 .filter-styles {
   color: #ffffff;
+  background-color: #756157;
   background-image: url("/images/catalog/catalog-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -223,9 +227,11 @@ input {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  text-decoration: none;
-  /*почему не срабатывает text-decoration: none;?*/
   color: #000000;
+}
+
+.hotel-card-link {
+  text-decoration: none;
 }
 
 .hotel-card-type,
@@ -245,6 +251,7 @@ input {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #82b3d3;
