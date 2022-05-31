@@ -89,7 +89,6 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  text-transform: capitalize;
   text-decoration: none;
   color: inherit;
 }
@@ -98,6 +97,7 @@ body {
   background-image: url("/images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color: #ffffff;
 }
 
 h2 {
@@ -130,32 +130,22 @@ p {
   line-height: 21px;
 }
 
-.advantages-item-special {
-  background-color: #82b3d3;
-  color: #ffffff;
-}
-
-.advantages-item-3,
-.advantages-item-5 {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advantages-item-4 {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantages-sublist {
+.advantages-item {
   color: #000000;
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
-/*не могу понять, по какой причине корректно не отображается заливка в .advantages-subitem-1 и.advantages-subitem-3, хотя с .advantages-subitem-2 все ок*/
-.advantages-subitem-1,
-.advantages-subitem-3 {
-  background-color: rgba(131, 179, 211, 0.12);
+.advantages-item-special {
+  color: #ffffff;
+  background-color: #82b3d3;
 }
 
 .advantages-subitem-2 {
   background-color: #ffffff;
+}
+
+.advantages-item-4 {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .newsletters-subscribtion {
