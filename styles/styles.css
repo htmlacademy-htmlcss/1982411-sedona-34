@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,23 +10,7 @@
   font-family: "PT Sans";
   font-style: bold;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -94,8 +78,10 @@ body {
 }
 
 .welcome-image {
-  background-image: url("/images/index-background.jpg");
-  background-size: 100% auto;
+  background-image: url("../images/index-background.jpg");
+  width: 1200px;
+  height: 485px;
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: #ffffff;
 }
@@ -149,11 +135,13 @@ p {
 }
 
 .newsletters-subscribtion {
+  width: 1200px;
+  height: 411px;
   color: #ffffff;
-  background-color: #756157;
-  background-image: url("/images/subcribtion-background-index.jpg");
-  background-size: 100% auto;
+  background-image: url("../images/subcribtion-background-index.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
+  background-color: #756157;
 }
 
 .catalog-newsletters-subscribtion {
@@ -163,12 +151,15 @@ p {
 }
 
 input {
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: #000000;
   background-color: #f2f2f2;
 }
 
 .contacts {
+  font-style: normal;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -182,7 +173,7 @@ input {
 .filter-styles {
   color: #ffffff;
   background-color: #756157;
-  background-image: url("/images/catalog/catalog-background.jpg");
+  background-image: url("../images/catalog/catalog-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
