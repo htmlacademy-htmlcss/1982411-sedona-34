@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -23,7 +22,7 @@
             <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="about-page.html">О Седоне</a>
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -46,7 +45,8 @@
         </ul>
       </nav>
     </header>
-    <main class="main-index">
+    <main class="main-container main-index">
+      <div class="page-container">
       <h1 class="visually-hidden">Город Седона</h1>
       <div class="welcome-image">
         <img
@@ -161,6 +161,7 @@
         <a class="button hotel-search-button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
       </section>
       <section class="newsletters-subscribtion">
+        <div class="newsletters-subscribtion-container">
         <h2 class="newsletters-subscribtion-title">Подпишитесь на рассылку</h2>
         <p>
           Только полезная информация и никакого спама, честное бойскаутское!
@@ -178,9 +179,12 @@
             Подписаться
           </button>
         </form>
+      </div>
       </section>
+    </div>
     </main>
     <footer class="page-footer">
+      <div class="page-footer-container">
       <section class="footer-social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="footer-social-list">
@@ -219,6 +223,7 @@
           >
         </a>
       </section>
+    </div>
     </footer>
   </body>
 </html>

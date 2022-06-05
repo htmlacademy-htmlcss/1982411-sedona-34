@@ -14,7 +14,17 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+
+
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -61,12 +71,47 @@ body {
   background-color: #7db54f;
 }
 
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  width: 390;
+  margin: 0;
+  padding: 0;
+
+}
+
+.navigation-user {
+  max-width: 264px;
+  margin: 0;
+  margin-right: 70px;
+  margin-left: auto;
+}
+
+.navigation-logo {
+  display: block;
+  margin-right: 70px;
+  margin-left: 30px;
+}
+
 .navigation-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
   color: inherit;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .welcome-image {
@@ -76,6 +121,11 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #ffffff;
+}
+
+.welcome-title-image {
+  display: block;
+  margin: 0 auto;
 }
 
 .advantages {
@@ -94,9 +144,19 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-list {
+  margin: 0;
+  padding: 0;
+}
+
 .advantages-list p {
   font-size: 18px;
   line-height: 21px;
+}
+
+.advantages-sublist {
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-item {
@@ -151,7 +211,19 @@ input {
   background-color: #f2f2f2;
 }
 
+.page-footer-container {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.footer-social {
+  width: 142px;
+  margin-right: auto;
+}
+
 .contacts {
+  width: 720px;
   font-style: normal;
   font-size: 40px;
   line-height: 40px;
@@ -161,6 +233,11 @@ input {
 .contacts-phone {
   text-decoration: none;
   color: inherit;
+}
+
+.htmlacademy {
+  width: 115px;
+  margin-left: auto;
 }
 
 .filter-styles {
