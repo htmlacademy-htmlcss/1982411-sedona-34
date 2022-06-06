@@ -16,8 +16,6 @@
 
 html {
   height: 100%;
-
-
 }
 
 body {
@@ -115,9 +113,9 @@ body {
 }
 
 .welcome-image {
-  background-image: url("../images/index-background.jpg");
   width: 1200px;
   height: 485px;
+  background-image: url("../images/index-background.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #ffffff;
@@ -178,6 +176,12 @@ body {
 
 .hotels-search {
   text-align: center;
+}
+
+.search-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
 }
 
 .newsletters-subscribtion {
@@ -241,10 +245,15 @@ input {
 }
 
 .filter-styles {
+  display: flex;
+  width: 1200px;
+  height: 403px;
+  margin: 0;
+  padding: 0;
   color: #ffffff;
   background-color: #756157;
   background-image: url("../images/catalog/catalog-background.jpg");
-  background-size: 100% auto;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -281,8 +290,37 @@ input {
 }
 
 .filter-results-container {
+  width: 1200px;
+  height: 1212px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
   line-height: 21px;
+}
+
+.filter-results {
+  width: 1057px;
+  height: 49px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hotels-list-container {
+  width: 1056px;
+  height: 876px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.pagination-container {
+  width: 1056;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .select-control-label {
@@ -293,6 +331,19 @@ input {
 .select-control {
   font-size: 18px;
   line-height: 21px;
+}
+
+.hotels-list {
+  width: 1056px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hotel-card {
+  width: 340px;
 }
 
 .hotel-card-title {
@@ -325,4 +376,17 @@ input {
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
+}
+
+.pagination {
+  width: 400px;
+  margin-right: 270px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-item {
+  width: 60px;
 }
