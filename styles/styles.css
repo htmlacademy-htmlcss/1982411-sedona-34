@@ -76,7 +76,7 @@ body {
 }
 
 .navigation-list {
-  width: 390;
+  width: 390px;
   margin: 0;
   padding: 0;
 
@@ -245,16 +245,21 @@ input {
 }
 
 .filter-styles {
-  display: flex;
   width: 1200px;
   height: 403px;
   margin: 0;
-  padding: 0;
   color: #ffffff;
   background-color: #756157;
   background-image: url("../images/catalog/catalog-background.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+.catalog-filter-container {
+  display: flex;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin: 0 auto;
 }
 
 .inner-header-title {
