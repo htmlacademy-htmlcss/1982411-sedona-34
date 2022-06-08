@@ -146,25 +146,50 @@ body {
 .advantages-list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-list p {
+  color: #333333;
   font-size: 18px;
   line-height: 21px;
 }
 
-.advantages-sublist {
-  margin: 0;
-  padding: 0;
-}
-
 .advantages-item {
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-special {
+  width: 1200px;
+  display: flex;
   color: #ffffff;
   background-color: #82b3d3;
+}
+
+.container-item {
+  width: 400px;
+}
+
+.advantage-illustration {
+  width: 800px;
+  margin: 0;
+}
+
+.advantages-item-special p {
+  color: inherit;
+}
+
+.advantages-sublist {
+  width: 1200px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-subitem {
+  width: 400px;
 }
 
 .advantages-subitem-2 {
@@ -364,11 +389,16 @@ input {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .hotel-card {
   width: 340px;
+  margin-right: 18px;
+}
+
+.hotel-card:nth-child(3n) {
+  margin: 0;
 }
 
 .hotel-card-title {
