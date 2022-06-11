@@ -39,6 +39,17 @@ body {
 
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
   font-weight: 700;
   font-size: 16px;
@@ -81,22 +92,30 @@ body {
 .navigation {
   display: flex;
   width: 1060px;
+  height: 65px;
   margin: 0 auto;
   padding-right: 70px;
   padding-left: 70px;
 }
 
 .navigation-list {
-  width: 390px;
+  width: 372px;
   margin: 0;
   padding: 0;
-
+  padding-left: 18px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-user {
   max-width: 264px;
   margin: 0;
+  padding: 0;
   margin-left: auto;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-logo {
@@ -105,11 +124,28 @@ body {
 }
 
 .navigation-link {
+  display: block;
+  margin-top: 20px;
+  margin-right: 34px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
   color: inherit;
+}
+
+.navigation-user .navigation-item {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-user .navigation-link {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0;
+  display: block;
+  color: #ffffff;
 }
 
 .main-container {
@@ -131,6 +167,7 @@ body {
 }
 
 .welcome-title-image {
+  padding-top: 51px;
   display: block;
   margin: 0 auto;
 }
@@ -141,12 +178,20 @@ body {
 }
 
 .advantages-main-title {
+  margin-top: 63px;
+  margin-bottom: 31px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
+.advantages-main-paragraph {
+  margin: 0;
+  margin-bottom: 90px;
+}
+
 .advantages-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -157,9 +202,12 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .advantages-list p {
+  margin: 0;
+  margin-top: 30px;
   color: #333333;
   font-size: 18px;
   line-height: 21px;
@@ -177,8 +225,12 @@ body {
   background-color: #82b3d3;
 }
 
-.container-item {
+.container-item-text {
   width: 400px;
+}
+
+.container-item {
+  margin: 92px 85px;
 }
 
 .advantage-illustration {
@@ -192,9 +244,10 @@ body {
 
 .advantages-sublist {
   width: 1200px;
-  display: flex;
   margin: 0;
   padding: 0;
+  display: flex;
+  list-style-type: none;
 }
 
 .advantages-subitem {
