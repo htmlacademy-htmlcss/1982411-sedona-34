@@ -418,12 +418,14 @@ body {
 }
 
 .catalog-filter-container {
-  width: 1200px;
-  height: 403px;
+  width: 1060px;
+  min-height: 298px;
   display: flex;
   flex-direction: column;
-  padding-left: 70px;
+  padding-top: 35px;
   padding-right: 70px;
+  padding-bottom: 70px;
+  padding-left: 70px;
   margin: 0 auto;
   color: #ffffff;
   background-color: #756157;
@@ -438,6 +440,8 @@ body {
 }
 
 .inner-header-title {
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 60px;
   line-height: 78px;
 }
@@ -448,8 +452,17 @@ body {
 }
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  display: flex;
   font-size: 16px;
   line-height: 21px;
+  list-style-type: none;
+}
+
+.breadcrumbs-link:not(:last-child) {
+  margin-right: 25px;
 }
 
 .catalog-filter {
@@ -469,6 +482,9 @@ body {
 }
 
 .filter-results-title {
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -488,24 +504,11 @@ body {
   width: 1057px;
   height: 49px;
   margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 56px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-}
 
-.hotels-list-container {
-  width: 1056px;
-  height: 876px;
-  margin: 0 auto;
-  display: flex;
-}
-
-.pagination-container {
-  width: 1056px;
-  height: 60px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
 }
 
 .select-control-label {
@@ -519,6 +522,28 @@ body {
   line-height: 21px;
 }
 
+.select-control-filter {
+  min-width: 290px;
+  margin-right: auto;
+}
+
+.filter-results-view {
+  min-width: 156px;
+}
+
+.view {
+  min-width: 48;
+  min-height: 48;
+  display: block;
+}
+
+.hotels-list-container {
+  width: 1056px;
+  height: 876px;
+  margin: 0 auto;
+  display: flex;
+}
+
 .hotels-list {
   width: 1056px;
   margin: 0;
@@ -526,6 +551,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  list-style-type: none;
 }
 
 .hotel-card {
@@ -554,7 +580,43 @@ body {
   background-color: #f2f2f2;
 }
 
+
+.pagination-container {
+  width: 1056px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 96px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination {
+  width: 400px;
+  margin: 0;
+  margin-right: 270px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.pagination-item {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 12px 18px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -569,15 +631,11 @@ body {
   background-color: #f2f2f2;
 }
 
-.pagination {
-  width: 400px;
-  margin-right: 270px;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.control-label-bottom {
+  min-width: 386px;
+  height: 49px;
 }
 
-.pagination-item {
-  width: 60px;
+.control-bottom {
+  min-width: 160px;
 }
