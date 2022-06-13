@@ -53,6 +53,7 @@ body {
 
 .button {
   min-width: 160px;
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -417,6 +418,11 @@ body {
   width: 115px;
 }
 
+.htmlacademy-logo {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 .catalog-filter-container {
   width: 1060px;
   min-height: 298px;
@@ -483,8 +489,9 @@ body {
 
 .filter-results-title {
   margin: 0;
-  margin-right: auto;
+  margin-right: 191px;
   padding: 0;
+  align-self: center;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -518,23 +525,37 @@ body {
 }
 
 .select-control {
+  font-family: "PT Sans";
   font-size: 18px;
   line-height: 21px;
+  border: 2px solid #E5E5E5;
 }
 
 .select-control-filter {
   min-width: 290px;
-  margin-right: auto;
+  margin-right: 78px;
 }
 
 .filter-results-view {
   min-width: 156px;
+  display: flex;
+  align-self: flex-end;
 }
 
 .view {
-  min-width: 48;
-  min-height: 48;
+  width: 44px;
+  height: 44px;
+  margin-right: 8px;
   display: block;
+  border: 2px solid #E5E5E5;
+}
+
+.view:nth-child(3n) {
+  margin: 0;
+}
+
+.view-current {
+  border: 2px solid #000000;
 }
 
 .hotels-list-container {
@@ -631,9 +652,16 @@ body {
   background-color: #f2f2f2;
 }
 
-.control-label-bottom {
+.hotels-on-page {
   min-width: 386px;
-  height: 49px;
+  min-height: 49px;
+  display: flex;
+}
+
+.control-label-bottom {
+  min-width: 175px;
+  margin-right: 51px;
+  align-self: center;
 }
 
 .control-bottom {

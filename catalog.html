@@ -124,13 +124,13 @@
                   <option value="popular">Сначала популярные</option>
                 </select>
                 <div class="filter-results-view">
-                  <a class="button button-selected view" href="#">
+                  <a class="view view-current cards" href="#">
                     <span class="visually-hidden">Показать карточки</span>
                   </a>
-                  <a class="button" href="#">
+                  <a class="view slideshow" href="#">
                     <span class="visually-hidden">Слайдшоу</span>
                   </a>
-                  <a class="button" href="#">
+                  <a class="view list" href="#">
                     <span class="visually-hidden">Показать список</span>
                   </a>
                 </div>
@@ -228,31 +228,34 @@
                     <a class="pagination-link" href="#">10</a>
                   </li>
                 </ul>
-                <label class="select-control-label control-label-bottom">
-                  Гостиниц на странице:
-                  <select class="select-control control-bottom" aria-label="Сортировка">
+                <div class="hotels-on-page">
+                  <label class="select-control-label control-label-bottom" for="sorting">
+                    Гостиниц на странице:
+                  </label>
+                  <select class="select-control control-bottom" aria-label="Сортировка" id="sorting">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4" selected>4</option>
                   </select>
-                </label>
+                </div>
               </div>
             </div>
           </section>
-
           <section class="newsletters-subscribtion catalog-newsletters-subscribtion">
-            <h2 class="newsletters-subscribtion-title">Подпишитесь на рассылку</h2>
-            <p>
-              Только полезная информация и никакого спама, честное бойскаутское!
-            </p>
-            <form class="newsletters-subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="visually-hidden" for="e-mail">Ваш email</label>
-              <input type="email" name="email-input" placeholder="Ваш e-mail" id="e-mail">
-              <button class="button subscribe-button" type="submit">
-                Подписаться
-              </button>
-            </form>
+            <div>
+              <h2 class="newsletters-subscribtion-title">Подпишитесь на рассылку</h2>
+              <p class="newsletters-subscribtion-paragraph">
+                Только полезная информация и никакого спама,<br>честное бойскаутское!
+              </p>
+              <form class="newsletters-subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="visually-hidden" for="e-mail">Ваш email</label>
+                <input class="email-input" type="email" name="email-input" placeholder="Ваш e-mail" id="e-mail">
+                <button class="button subscribe-button" type="submit">
+                  Подписаться
+                </button>
+              </form>
+            </div>
           </section>
         </div>
       </main>
