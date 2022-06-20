@@ -16,11 +16,14 @@
 
 html {
   height: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
   background-color: #E5E5E5;
 }
 
 body {
-  margin: 0;
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -108,9 +111,9 @@ body {
 }
 
 .navigation-logo {
-    margin-right: 30px;
-    display: block;
-    z-index: 1;
+  margin-right: 30px;
+  display: block;
+  z-index: 1;
 }
 
 .navigation-link {
@@ -598,21 +601,18 @@ body {
 }
 
 .hotel-card-title {
-  width: 300px;
+  min-width: 300px;
   grid-column: 1 / -1;
   margin: 0;
-  padding-top: 14px;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
 }
 
 .hotel-card-link {
-  display: block;
-}
-
-.hotel-card-link {
+  display: grid;
   text-decoration: none;
+  row-gap: 16px;
 }
 
 .hotel-card-type {
