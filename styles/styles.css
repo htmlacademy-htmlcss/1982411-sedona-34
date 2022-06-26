@@ -514,6 +514,18 @@ body {
   background-color: #ffffff;
 }
 
+.button-social:hover {
+  background-color: #ffffff;
+}
+
+.button-social:focus {
+  background-color: #ffffff;
+}
+
+.button-social:active {
+  background-color: #ffffff;
+}
+
 .social-icon {
   position: absolute;
   top: 0;
@@ -521,7 +533,19 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
+  fill: #83B3D3;
+}
 
+.button-social:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.button-social:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.button-social:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .contacts {
@@ -538,6 +562,18 @@ body {
   color: inherit;
 }
 
+.contacts-phone:hover {
+  color: #756157;
+}
+
+.contacts-phone:focus {
+  color: #756157;
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .htmlacademy {
   width: 115px;
 }
@@ -545,6 +581,19 @@ body {
 .htmlacademy-logo {
   margin-top: 8px;
   margin-bottom: 8px;
+  fill: #000000;
+}
+
+.htmlacademy-link:hover .htmlacademy-logo {
+  fill: #756157;
+}
+
+.htmlacademy-link:focus .htmlacademy-logo {
+  fill: #756157;
+}
+
+.htmlacademy-link:active .htmlacademy-logo {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .catalog-filter-container {
@@ -608,6 +657,19 @@ body {
 
 .home-icon {
   margin-right: 25px;
+  fill: #FFFFFF;
+}
+
+.breadcrumbs-link:hover .home-icon {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus .home-icon {
+  fill: #FFFFFF;
+}
+
+.breadcrumbs-link:active .home-icon {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-filter {
@@ -677,6 +739,19 @@ body {
   background-color: #82b3d3;
 }
 
+.button-apply:hover {
+  background-color: #68A2CA;
+}
+
+.button-apply:focus {
+  background-color: #68A2CA;
+}
+
+.button-apply:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82B3D3;
+}
+
 .button-reset {
   min-width: 130px;
   padding: 14px 15px;
@@ -685,6 +760,21 @@ body {
   box-sizing: border-box;
   font-weight: 400;
   text-transform: capitalize;
+  background-color: transparent;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
+
+.button-reset:focus {
+  color: #FFFFFF;
+  background-color: transparent;
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
 
