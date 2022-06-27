@@ -32,6 +32,7 @@ body {
   line-height: 26px;
   color: #000000;
   background-color: #ffffff;
+  box-shadow: 0 0 10px -5px #000000;
 }
 
 .body-container {
@@ -73,13 +74,17 @@ body {
   background-color: #615048;
 }
 
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
 .button:focus {
   background-color: #615048;
 }
 
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #756157;
+.button:disabled {
+  background-color: #E5E5E5;
 }
 
 .page-header {
@@ -124,6 +129,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   padding-top: 20px;
   margin-right: 34px;
@@ -133,6 +139,17 @@ body {
   line-height: 26px;
   text-decoration: none;
   color: inherit;
+}
+
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #756257;
+  z-index: 1;
 }
 
 .navigation-user .navigation-item {
@@ -182,13 +199,13 @@ body {
   background-color: #615048;
 }
 
-.navigation-user .navigation-button:focus {
-  background-color: #615048;
-}
-
 .navigation-user .navigation-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
+}
+
+.navigation-user .navigation-button:focus {
+  background-color: #615048;
 }
 
 .navigation-user::before {
@@ -210,7 +227,6 @@ body {
   background-color: #7DB54F;
   box-sizing: border-box;
 }
-
 
 .main-container {
   flex-grow: 1;
@@ -465,13 +481,13 @@ body {
   background-color: #68A2CA;
 }
 
-.subscribe-button:focus {
-  background-color: #68A2CA;
-}
-
 .subscribe-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
+}
+
+.subscribe-button:focus {
+  background-color: #68A2CA;
 }
 
 .page-footer {
@@ -481,12 +497,10 @@ body {
   padding-bottom: 30px;
 }
 
-
 .page-footer-container {
   display: flex;
   width: 1060px;
   margin: 0 auto;
-
 }
 
 .footer-social {
@@ -518,11 +532,11 @@ body {
   background-color: #ffffff;
 }
 
-.button-social:focus {
+.button-social:active {
   background-color: #ffffff;
 }
 
-.button-social:active {
+.button-social:focus {
   background-color: #ffffff;
 }
 
@@ -743,13 +757,13 @@ body {
   background-color: #68A2CA;
 }
 
-.button-apply:focus {
-  background-color: #68A2CA;
-}
-
 .button-apply:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
+}
+
+.button-apply:focus {
+  background-color: #68A2CA;
 }
 
 .button-reset {
@@ -835,6 +849,11 @@ body {
   border: 2px solid #3F5E72;
 }
 
+.select-control:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .select-control-filter {
   min-width: 290px;
   margin-right: 78px;
@@ -859,12 +878,12 @@ body {
   border: 2px solid #000000;
 }
 
-.view:focus {
-  border: 2px solid #68A2CA;
-}
-
 .view:active {
   border: 2px solid #000000;
+}
+
+.view:focus {
+  border: 2px solid #68A2CA;
 }
 
 .view:nth-child(3n) {
@@ -974,13 +993,13 @@ body {
   background-color: #68A2CA;
 }
 
-.button-favourites:focus {
-  background-color: #68A2CA;
-}
-
 .button-favourites:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
+}
+
+.button-favourites:focus {
+  background-color: #68A2CA;
 }
 
 .button-favourites-selected {
@@ -996,13 +1015,13 @@ body {
   background-color: #6C9E42;
 }
 
-.button-favourites-selected:focus {
-  background-color: #6C9E42;
-}
-
 .button-favourites-selected:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #7DB54F;
+}
+
+.button-favourites-selected:focus {
+  background-color: #6C9E42;
 }
 
 .stars {
@@ -1090,13 +1109,13 @@ body {
   background-color: #68A2CA;
 }
 
-.pagination-link:focus {
-  background-color: #68A2CA;
-}
-
 .pagination-link:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
+}
+
+.pagination-link:focus {
+  background-color: #68A2CA;
 }
 
 .pagination-current {
@@ -1109,12 +1128,12 @@ body {
   background-color: #F2F2F2;
 }
 
-.pagination-current:focus {
+.pagination-current:active {
+  color: #000000;
   background-color: #F2F2F2;
 }
 
-.pagination-current:active {
-  color: #000000;
+.pagination-current:focus {
   background-color: #F2F2F2;
 }
 
