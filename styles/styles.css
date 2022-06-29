@@ -216,13 +216,13 @@ body {
   z-index: 1;
   width: 20px;
   height: 20px;
-  padding-top: 2.5px;
-  padding-bottom: 4.5px;
+  padding-top: 2px;
   border-radius: 10px;
   font-family: "PT Sans";
   font-size: 10px;
   line-height: 13px;
   text-align: center;
+  vertical-align: top;
   color: #ffffff;
   background-color: #7DB54F;
   box-sizing: border-box;
