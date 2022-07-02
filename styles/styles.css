@@ -123,9 +123,9 @@ body {
 }
 
 .navigation-logo {
+  z-index: 1;
   margin-right: 30px;
   display: block;
-  z-index: 1;
 }
 
 .navigation-link {
@@ -141,15 +141,27 @@ body {
   color: inherit;
 }
 
+.navigation-link:hover {
+  color: #756157;
+}
+
+.navigation-link:focus {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .navigation-link-current::before {
   content: "";
   position: absolute;
+  z-index: 1;
   right: 0;
   bottom: 0;
   left: 0;
   height: 4px;
   background-color: #756257;
-  z-index: 1;
 }
 
 .navigation-user .navigation-item {
@@ -171,6 +183,18 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+}
+
+.navigation-user .navigation-link:hover {
+  opacity: 50%;
+}
+
+.navigation-user .navigation-link:focus {
+  opacity: 70%;
+}
+
+.navigation-user .navigation-link:active {
+  opacity: 50%;
 }
 
 .navigation-user .navigation-item:nth-child(1) .navigation-link {
@@ -197,15 +221,18 @@ body {
 
 .navigation-user .navigation-button:hover {
   background-color: #615048;
+  opacity: 100%;
 }
 
 .navigation-user .navigation-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
+  opacity: 100%;
 }
 
 .navigation-user .navigation-button:focus {
   background-color: #615048;
+  opacity: 100%;
 }
 
 .navigation-user::before {
@@ -454,16 +481,35 @@ body {
 
 .email-input {
   width: 600px;
-  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 22px;
+  box-sizing: border-box;
   border: none;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: inherit;
+  color: #000000;
   background-color: #f2f2f2;
   border-radius: 10px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+}
+
+.email-input:hover,
+.email-input:focus {
+  outline: 2px solid #68A2CA;
+}
+
+.email-input:disabled,
+.email-input:disabled:hover {
+  color: rgba(0, 0, 0, 0);
+}
+
+.email-input:invalid,
+.email-input:focus:invalid {
+  outline: 2px solid rgb(202, 21, 21);
 }
 
 .subscribe-button {
@@ -695,6 +741,8 @@ body {
 .catalog-filter-group {
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-rows: auto auto;
   border: none;
 }
 
@@ -719,16 +767,141 @@ body {
   line-height: 21px;
 }
 
+.range {
+  width: 288px;
+  display: grid;
+  grid-template-columns: 144px 144px;
+  grid-template-rows: 1fr 1fr;
+}
+
 .range-wrapper-inputs {
-  margin-bottom: 32px;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  align-self: end;
+  grid-template-columns: 144px 144px;
+}
+
+.range-input-field {
+  display: flex;
+  height: 48px;
+  padding-left: 18px;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.min {
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.min:hover {
+  z-index: 1;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.min:focus {
+  z-index: 1;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  outline: 4px solid #81B3D2;
+  box-shadow: inset 0 0 0 3px #81B3D2;
+}
+
+.min:active {
+  z-index: 1;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #756257;
+}
+
+.max {
+  border: 2px solid #FFFFFF;
+
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.max:hover {
+
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.max:focus {
+
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  outline: 4px solid #81B3D2;
+  box-shadow: inset 0 0 0 3px #81B3D2;
+}
+
+.max:active {
+
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-color: #756257;
+}
+
+.range-input {
+  max-width: 90px;
+  padding: 0;
+  align-self: center;
+  appearance: textfield;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  color: inherit;
+  background-color: transparent;
+}
+
+.range-input:focus,
+.range-input:active {
+  outline: none;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog-flter-label {
+  align-self: center;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  opacity: 30%;
 }
 
 .range-scale {
   position: relative;
+  transform: translateY(-8px);
   width: 288px;
   height: 4px;
   margin: 0;
-  background-color: #333333;
+  padding: 0;
+  grid-row: 2 / 3;
+  align-self: end;
+  background-color: #676666;
 }
 
 .range-bar {
@@ -736,6 +909,39 @@ body {
   width: 228px;
   height: 4px;
   background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  left: 220px;
 }
 
 .filter-buttons {
@@ -818,7 +1024,6 @@ body {
   margin-bottom: 56px;
   display: flex;
   justify-content: flex-start;
-
 }
 
 .select-control-label {
@@ -828,13 +1033,20 @@ body {
 }
 
 .select-control {
+  padding: 14px 20px;
+  padding-right: 32px;
   font-family: "PT Sans";
   font-size: 18px;
   line-height: 21px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   color: #333333;
+  background-image: url('../images/catalog/select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 20px center;
   cursor: pointer;
+  box-sizing: border-box;
+  appearance: none;
 }
 
 .select-control:hover {
