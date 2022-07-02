@@ -735,7 +735,8 @@ body {
 .catalog-filter {
   width: 1060px;
   display: grid;
-  grid-template-columns: auto auto auto 160px;
+  grid-template-columns: 148px 148px auto 160px;
+  column-gap: 70px;
 }
 
 .catalog-filter-group {
@@ -765,6 +766,85 @@ body {
 .catalog-filter-item {
   font-size: 18px;
   line-height: 21px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:focus .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+
+.control:active .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:disabled+.control-mark {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.control-input[type="checkbox"]:checked+.control-mark::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 13px;
+  height: 10px;
+  background-image: url('../images/catalog/tick.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.radio {
+  border-radius: 10px;
+}
+
+.control-input[type="radio"]:checked+.radio::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 10px;
+}
+
+.control:hover .radio {
+  background-color: #FFFFFF;
+}
+
+.control:focus .radio {
+  background-color: #FFFFFF;
+  outline: 3px solid #83B3D3;
+}
+
+.control:active .radio {
+  background-color: #FFFFFF;
+}
+
+.price-range {
+  margin-left: 97px;
 }
 
 .range {
@@ -824,16 +904,23 @@ body {
   background-color: #756257;
 }
 
+.min:disabled {
+  z-index: 1;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .max {
   border: 2px solid #FFFFFF;
-
   border-radius: 4px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
 .max:hover {
-
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 4px;
   border-bottom-left-radius: 0;
@@ -841,7 +928,6 @@ body {
 }
 
 .max:focus {
-
   border: 2px solid #FFFFFF;
   border-radius: 4px;
   border-bottom-left-radius: 0;
@@ -851,12 +937,19 @@ body {
 }
 
 .max:active {
-
   border: 2px solid #FFFFFF;
   border-radius: 4px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   background-color: #756257;
+}
+
+.max:disabled {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .range-input {
@@ -973,11 +1066,10 @@ body {
 }
 
 .button-reset {
-  min-width: 130px;
-  padding: 14px 15px;
+  height: 32px;
+  padding: 0;
   grid-row: 3/ 4;
-  align-self: start;
-  box-sizing: border-box;
+  align-self: end;
   font-weight: 400;
   text-transform: capitalize;
   background-color: transparent;
@@ -991,6 +1083,7 @@ body {
 .button-reset:focus {
   color: #FFFFFF;
   background-color: transparent;
+  outline: 3px solid #83B3D3;
 }
 
 .button-reset:active {
