@@ -667,16 +667,19 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
   position: relative;
-  width: 715px;
+  width: 575px;
   margin: auto;
   padding: 70px;
   padding-top: 62px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-  box-sizing: border-box;
 }
 
 .modal-close-button {
@@ -737,10 +740,13 @@ body {
 .field-group {
   position: relative;
   margin: 0;
+  margin-bottom: 40px;
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.field-group:not(.guest-category .field-group) {
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 .search-label {
@@ -761,10 +767,78 @@ body {
   border: none;
   border-radius: 4px;
   box-sizing: border-box;
+  cursor: pointer;
+}
+
+.check-in-field:hover,
+.check-out-field:hover {
+  background-color: #E6E6E6;
+}
+
+.check-in-field:focus,
+.check-out-field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.check-in-field:active,
+.check-out-field:active {
+  background-color: #FFFFFF;
+  outline: 2px solid #000000;
+}
+
+.check-in-field::placeholder,
+.check-out-field::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  opacity: 60%;
+}
+
+.check-in-field:disabled,
+.check-out-field:disabled {
+  background-color: #000000;
+  opacity: 80%;
+}
+
+.check-in-field {
+  background-image: url("../images/imdex-modal/dates-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center right 17px;
+}
+
+.check-out-field {
+  background-image: url("../images/imdex-modal/dates-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center right 17px;
+}
+
+.check-in::after {
+  content: "Мы не можем отправить вас в прошлое.";
+  position: absolute;
+  top: 58px;
+  left: 154px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF5757;
+}
+
+.check-out::after {
+  content: "На эти даты есть свободные номера. Пока есть.";
+  position: absolute;
+  top: 58px;
+  left: 154px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
 }
 
 .quantity {
   width: 133px;
+  justify-self: end;
   text-align: center;
   appearance: textfield;
 }
@@ -777,26 +851,149 @@ body {
 
 .minus {
   position: absolute;
-  padding: 0;
-  top: 18px;
-  left: 146px;
-  width: 13px;
-  height: 13px;
+  padding: 3px 3px;
+  top: 12px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/imdex-modal/minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  opacity: 30%;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .plus {
   position: absolute;
-  padding: 0;
-  top: 18px;
-  left: 228px;
-  width: 13px;
-  height: 13px;
+  padding: 3px 3px;
+  top: 12px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/imdex-modal/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  opacity: 30%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.minus:hover,
+.plus:hover {
+  opacity: 100%;
+}
+
+.minus:focus,
+.plus:focus {
+  opacity: 100%;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
 }
 
 .guest-category {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 288px auto;
   column-gap: 56px;
+}
+
+.group-adults,
+.group-children {
+  position: relative;
+}
+
+.minus-adults {
+  left: 170px;
+}
+
+.plus-adults {
+  left: 251px;
+}
+
+.minus-children {
+  left: 114px;
+}
+
+.plus-children {
+  left: 194px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 14px;
+  left: 54px;
+  width: 25px;
+  height: 25px;
+}
+
+.tooltip-toggle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #83B3D3;
+  background-image: url("../images/imdex-modal/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.tooltip-toggle:hover+.tooltip-text,
+.tooltip-toggle:focus+.tooltip-text {
+  display: block;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 40px;
+  left: -115px;
+  width: 256px;
+  padding: 15px 18px 22px 22px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.tooltip-text:before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  transform: translateY(1px);
+  width: 19px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("..//images/imdex-modal/tooltip-triangle.svg");
+}
+
+.search-form-button {
+  padding: 12px 26px;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #83B3D3;
+  border-radius: 10px;
+}
+
+.search-form-button:hover {
+  background-color: #68A2CA;
+}
+
+.search-form-button:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.search-form-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
 }
 
 .catalog-filter-container {
@@ -952,7 +1149,7 @@ body {
   left: 4px;
   width: 13px;
   height: 10px;
-  background-image: url('../images/catalog/tick.svg');
+  background-image: url("../images/catalog/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1282,7 +1479,7 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   color: #333333;
-  background-image: url('../images/catalog/select-arrow.svg');
+  background-image: url("../images/catalog/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   cursor: pointer;
@@ -1305,6 +1502,7 @@ body {
 .select-control:disabled {
   color: rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #E5E5E5;
 }
 
 .select-control-filter {
