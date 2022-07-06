@@ -454,6 +454,7 @@ body {
 }
 
 .catalog-newsletters-subscribtion {
+  padding-top: 25px;
   color: #000000;
   background-color: #ffffff;
   background-image: none;
@@ -869,6 +870,7 @@ body {
   background-image: url("../images/imdex-modal/minus.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: transparent;
   border: none;
   opacity: 30%;
   box-sizing: border-box;
@@ -884,6 +886,7 @@ body {
   background-image: url("../images/imdex-modal/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: transparent;
   border: none;
   opacity: 30%;
   box-sizing: border-box;
@@ -1147,20 +1150,20 @@ body {
   border-radius: 4px;
 }
 
-.control:hover .control-mark {
+.control-input[type="checkbox"]:hover+.control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control:focus .control-mark {
+.control-input[type="checkbox"]:focus+.control-mark {
   background-color: rgba(255, 255, 255, 0.6);
   outline: 3px solid #83B3D3;
 }
 
-.control:active .control-mark {
+.control-input[type="checkbox"]:active+.control-mark {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:disabled+.control-mark {
+.control-input[type="checkbox"]:disabled+.control-mark {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -1176,12 +1179,11 @@ body {
   background-position: center;
 }
 
-
 .radio {
   border-radius: 10px;
 }
 
-.control-input[type="radio"]:checked+.radio::before {
+.control-input[type="radio"]:checked+.control-mark::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -1192,16 +1194,16 @@ body {
   border-radius: 10px;
 }
 
-.control:hover .radio {
+.control-input[type="radio"]:hover+.control-mark {
   background-color: #FFFFFF;
 }
 
-.control:focus .radio {
+.control-input[type="radio"]:focus+.control-mark {
   background-color: #FFFFFF;
   outline: 3px solid #83B3D3;
 }
 
-.control:active .radio {
+.control-input[type="radio"]:active+.control-mark {
   background-color: #FFFFFF;
 }
 
@@ -1402,16 +1404,15 @@ body {
 .filter-buttons {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .button-apply {
-  min-width: 160px;
   padding: 14px 15px;
   grid-row: 2 / 3;
-  align-self: start;
+  align-self: end;
   box-sizing: border-box;
   background-color: #82b3d3;
+  overflow-wrap: break-word;
 }
 
 .button-apply:hover {
@@ -1428,7 +1429,7 @@ body {
 }
 
 .button-reset {
-  transform: translateY(-3px);
+  transform: translateY(4px);
   min-width: 0;
   width: 94px;
   height: 26px;
@@ -1535,6 +1536,7 @@ body {
 .filter-results-view {
   min-width: 156px;
   display: flex;
+  flex-wrap: wrap;
   align-self: flex-end;
 }
 
@@ -1602,7 +1604,7 @@ body {
   content: "";
   position: absolute;
   width: 1055px;
-  bottom: -66px;
+  bottom: -76px;
   border-bottom: 1px solid #E6E6E6;
 }
 
@@ -1747,7 +1749,7 @@ body {
   margin-right: 270px;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   list-style-type: none;
 }
@@ -1755,10 +1757,11 @@ body {
 .pagination-item {
   width: 60px;
   height: 60px;
+  margin-top: 10px;
   text-align: center;
 }
 
-.pagination-item:not(:last-child) {
+.pagination-item:not(:nth-child(6n)) {
   margin-right: 8px;
 }
 
