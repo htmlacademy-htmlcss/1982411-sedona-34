@@ -316,7 +316,7 @@ body {
 
 .advantages-title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -326,8 +326,8 @@ body {
 .advantages-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
   list-style-type: none;
   counter-set: advantage;
 }
@@ -347,8 +347,10 @@ body {
 }
 
 .advantages-item {
+  min-height: 384px;
   width: 400px;
-  display: flex;
+  display: grid;
+  align-items: center;
 }
 
 .advantages-item:nth-child(odd) {
@@ -357,17 +359,12 @@ body {
 
 .advantages-item-special {
   width: 1200px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  grid-column: 1 / -1;
   color: #ffffff;
   background-color: #82B3D3;
-}
-
-.container-item-text {
-  width: 400px;
-  min-height: 384px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .container-item {
@@ -375,7 +372,9 @@ body {
   padding-right: 85px;
 }
 
+/* Пришлось ограничить высоту .advantage-illustration, иначе весь блок не той высоты был*/
 .advantage-illustration {
+  height: 384px;
   width: 800px;
   margin: 0;
 }
@@ -396,12 +395,14 @@ body {
 .advantages-sublist {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
   list-style-type: none;
 }
 
 .advantages-subitem-icon {
-  padding-bottom: 30px;
+  padding-bottom: 26px;
 }
 
 .advantages-item-4 {
@@ -454,7 +455,6 @@ body {
 }
 
 .catalog-newsletters-subscribtion {
-  padding-top: 25px;
   color: #000000;
   background-color: #ffffff;
   background-image: none;
@@ -651,7 +651,7 @@ body {
 
 .htmlacademy-logo {
   position: absolute;
-  margin-top: 8px;
+  margin-top: 2px;
   margin-bottom: 8px;
   fill: #000000;
 }
@@ -1208,7 +1208,7 @@ body {
 }
 
 .price-range {
-  margin-left: 97px;
+  margin-left: 105px;
 }
 
 .range {
@@ -1229,12 +1229,12 @@ body {
 .range-input-field {
   display: flex;
   height: 48px;
-  padding-left: 18px;
   align-self: center;
   box-sizing: border-box;
 }
 
 .min {
+  padding-left: 16px;
   border: 2px solid #FFFFFF;
   border-radius: 4px;
   border-bottom-right-radius: 0;
@@ -1278,6 +1278,7 @@ body {
 }
 
 .max {
+  padding-left: 14px;
   border: 2px solid #FFFFFF;
   border-radius: 4px;
   border-bottom-left-radius: 0;
@@ -1351,7 +1352,7 @@ body {
 
 .range-scale {
   position: relative;
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   width: 288px;
   height: 4px;
   margin: 0;
@@ -1374,7 +1375,7 @@ body {
   height: 20px;
   border: none;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -1398,7 +1399,7 @@ body {
 
 .toggle-max {
   top: -8px;
-  left: 220px;
+  left: 218px;
 }
 
 .filter-buttons {
@@ -1432,8 +1433,8 @@ body {
   transform: translateY(4px);
   min-width: 0;
   width: 94px;
-  height: 26px;
-  padding: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
   grid-row: 3/ 4;
   align-self: end;
   justify-self: center;
@@ -1451,7 +1452,7 @@ body {
 .button-reset:focus {
   color: #FFFFFF;
   background-color: transparent;
-  outline: 3px solid #83B3D3;
+  outline: 4px solid #83B3D3;
 }
 
 .button-reset:active {
@@ -1604,7 +1605,7 @@ body {
   content: "";
   position: absolute;
   width: 1055px;
-  bottom: -76px;
+  bottom: -66px;
   border-bottom: 1px solid #E6E6E6;
 }
 
@@ -1739,6 +1740,7 @@ body {
   width: 1056px;
   height: 60px;
   margin: 0 auto;
+  padding-bottom: 25px;
   display: flex;
   align-items: center;
 }
@@ -1748,6 +1750,7 @@ body {
   margin: 0;
   margin-right: 270px;
   padding: 0;
+  padding-bottom: 12px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1768,8 +1771,8 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   padding: 12px 18px;
   font-weight: 700;
   font-size: 20px;
