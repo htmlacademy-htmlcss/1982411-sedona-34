@@ -368,18 +368,10 @@ body {
 }
 
 .container-item {
-  padding-left: 85px;
-  padding-right: 85px;
+  padding: 30px 85px;
 }
 
-/* Пришлось ограничить высоту .advantage-illustration, иначе весь блок не той высоты был*/
-.advantage-illustration {
-  height: 384px;
-  width: 800px;
-  margin: 0;
-}
-
-.advantage-illustration-2 {
+.davils-bridge {
   order: -1;
 }
 
@@ -815,13 +807,13 @@ body {
 }
 
 .check-in-field {
-  background-image: url("../images/imdex-modal/dates-icon.svg");
+  background-image: url("../images/index-modal/dates-icon.svg");
   background-repeat: no-repeat;
   background-position: center right 17px;
 }
 
 .check-out-field {
-  background-image: url("../images/imdex-modal/dates-icon.svg");
+  background-image: url("../images/index-modal/dates-icon.svg");
   background-repeat: no-repeat;
   background-position: center right 17px;
 }
@@ -867,7 +859,7 @@ body {
   top: 12px;
   width: 22px;
   height: 22px;
-  background-image: url("../images/imdex-modal/minus.svg");
+  background-image: url("../images/index-modal/minus.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -883,7 +875,7 @@ body {
   top: 12px;
   width: 22px;
   height: 22px;
-  background-image: url("../images/imdex-modal/plus.svg");
+  background-image: url("../images/index-modal/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -945,7 +937,7 @@ body {
   width: 25px;
   height: 25px;
   background-color: #83B3D3;
-  background-image: url("../images/imdex-modal/info.svg");
+  background-image: url("../images/index-modal/info.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -985,7 +977,7 @@ body {
   height: 9px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("..//images/imdex-modal/tooltip-triangle.svg");
+  background-image: url("..//images/index-modal/tooltip-triangle.svg");
 }
 
 .search-form-button {
@@ -1404,7 +1396,8 @@ body {
 
 .filter-buttons {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 160px;
+  grid-template-rows: 60px 48px 40px;
 }
 
 .button-apply {
@@ -1430,11 +1423,10 @@ body {
 }
 
 .button-reset {
-  transform: translateY(4px);
+  transform: translateY(8px);
   min-width: 0;
   width: 94px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding: 8px 15px;
   grid-row: 3/ 4;
   align-self: end;
   justify-self: center;
