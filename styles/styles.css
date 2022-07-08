@@ -56,7 +56,7 @@ body {
 
 .button {
   min-width: 160px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -200,7 +200,7 @@ body {
   opacity: 50%;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
+.search-item .navigation-link {
   position: absolute;
   left: 25%;
   background-image: url("../images/header/search-icon.svg");
@@ -208,7 +208,7 @@ body {
   background-position: center;
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.favourutes-item .navigation-link {
   position: absolute;
   left: 25%;
   background-image: url("../images/header/favorite-icon.svg");
@@ -248,7 +248,7 @@ body {
   height: 20px;
   padding-top: 2px;
   border-radius: 10px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 10px;
   line-height: 13px;
   text-align: center;
@@ -1497,7 +1497,7 @@ body {
 .select-control {
   padding: 14px 20px;
   padding-right: 32px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   border: 2px solid #E5E5E5;
