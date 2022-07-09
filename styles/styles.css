@@ -85,6 +85,7 @@ body {
 
 .button:disabled {
   background-color: #E5E5E5;
+  cursor: none;
 }
 
 .page-header {
@@ -353,8 +354,12 @@ body {
   align-items: center;
 }
 
-.advantages-item:nth-child(odd) {
+.advantages-item:nth-child(n+1):nth-child(-n+8):nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:nth-child(4) {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item-special {
@@ -368,24 +373,16 @@ body {
 }
 
 .container-item {
-  padding-left: 85px;
-  padding-right: 85px;
+  padding: 30px 85px;
 }
 
-/* Пришлось ограничить высоту .advantage-illustration, иначе весь блок не той высоты был*/
-.advantage-illustration {
-  height: 384px;
-  width: 800px;
-  margin: 0;
-}
-
-.advantage-illustration-2 {
+.davils-bridge {
   order: -1;
 }
 
 .illustration {
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .advantages-item-special p {
@@ -405,10 +402,6 @@ body {
   padding-bottom: 26px;
 }
 
-.advantages-item-4 {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
 .hotels-search {
   min-height: 417px;
   display: flex;
@@ -419,7 +412,7 @@ body {
 
 .search-title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -734,6 +727,11 @@ body {
   fill: rgba(0, 0, 0, 0.3);
 }
 
+.modal-close-button:disabled .cross {
+  fill: rgba(0, 0, 0, 0.3);
+  cursor: none;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 63px;
@@ -812,18 +810,41 @@ body {
 .check-out-field:disabled {
   background-color: #000000;
   opacity: 80%;
+  cursor: none;
 }
 
-.check-in-field {
-  background-image: url("../images/imdex-modal/dates-icon.svg");
+.calendar {
+  position: absolute;
+  top: 14px;
+  left: 536px;
+  margin: 0;
+  padding: 5px 5px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/index-modal/dates-icon.svg");
   background-repeat: no-repeat;
-  background-position: center right 17px;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.check-out-field {
-  background-image: url("../images/imdex-modal/dates-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center right 17px;
+.calendar:hover {
+  opacity: 60%;
+}
+
+.calendar:focus {
+  box-shadow: inset 0 0 0 2px #83B3D3;
+  border-radius: 4px;
+}
+
+.calendar:active {
+  box-shadow: inset 0 0 0 2px #000000;
+  border-radius: 4px;
+}
+
+.calendar:disabled {
+  cursor: none;
 }
 
 .check-in::after {
@@ -861,13 +882,21 @@ body {
   margin: 0;
 }
 
+.quantity:hover {
+  background-color: #E6E6E6;
+}
+
+.quantity:disabled {
+  cursor: none;
+}
+
 .minus {
   position: absolute;
   padding: 3px 3px;
   top: 12px;
   width: 22px;
   height: 22px;
-  background-image: url("../images/imdex-modal/minus.svg");
+  background-image: url("../images/index-modal/minus.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -883,7 +912,7 @@ body {
   top: 12px;
   width: 22px;
   height: 22px;
-  background-image: url("../images/imdex-modal/plus.svg");
+  background-image: url("../images/index-modal/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -903,6 +932,11 @@ body {
   opacity: 100%;
   outline: 3px solid #83B3D3;
   border-radius: 4px;
+}
+
+.minus:disabled,
+.plus:disabled {
+  cursor: none;
 }
 
 .guest-category {
@@ -945,7 +979,7 @@ body {
   width: 25px;
   height: 25px;
   background-color: #83B3D3;
-  background-image: url("../images/imdex-modal/info.svg");
+  background-image: url("../images/index-modal/info.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -985,7 +1019,7 @@ body {
   height: 9px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("..//images/imdex-modal/tooltip-triangle.svg");
+  background-image: url("..//images/index-modal/tooltip-triangle.svg");
 }
 
 .search-form-button {
@@ -1165,6 +1199,7 @@ body {
 
 .control-input[type="checkbox"]:disabled+.control-mark {
   background-color: rgba(255, 255, 255, 0.2);
+  cursor: none;
 }
 
 .control-input[type="checkbox"]:checked+.control-mark::before {
@@ -1275,6 +1310,7 @@ body {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   background-color: rgba(255, 255, 255, 0.3);
+  cursor: none;
 }
 
 .max {
@@ -1315,6 +1351,7 @@ body {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   background-color: rgba(255, 255, 255, 0.3);
+  cursor: none;
 }
 
 .range-input {
@@ -1393,6 +1430,12 @@ body {
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
+.range-toggle:disabled {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: #676666;
+  cursor: none;
+}
+
 .toggle-min {
   top: -8px;
 }
@@ -1404,7 +1447,8 @@ body {
 
 .filter-buttons {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 160px;
+  grid-template-rows: 60px 48px 40px;
 }
 
 .button-apply {
@@ -1430,11 +1474,10 @@ body {
 }
 
 .button-reset {
-  transform: translateY(4px);
+  transform: translateY(16px);
   min-width: 0;
-  width: 94px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  width: 160px;
+  padding: 14px 15px;
   grid-row: 3/ 4;
   align-self: end;
   justify-self: center;
@@ -1452,12 +1495,18 @@ body {
 .button-reset:focus {
   color: #FFFFFF;
   background-color: transparent;
-  outline: 4px solid #83B3D3;
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
 .button-reset:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
+}
+
+.button-reset:disabled {
+  color: #000000;
+  background-color: transparent;
+  cursor: none;
 }
 
 .filter-results-title {
@@ -1527,6 +1576,7 @@ body {
   color: rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.3);
   border: 2px solid #E5E5E5;
+  cursor: none;
 }
 
 .select-control-filter {

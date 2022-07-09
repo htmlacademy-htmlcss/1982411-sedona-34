@@ -13,7 +13,7 @@
       <header class="page-header">
         <nav class="navigation">
           <a class="navigation-logo">
-            <img class="page-header-logo" src="images/header/header-logo-catalog.svg" alt="Логотип Седона" width="139"
+            <img class="page-header-logo" src="images/header/header-logo-catalog.svg" alt="Логотип Седона." width="139"
               height="70">
           </a>
           <ul class="navigation-list">
@@ -63,15 +63,13 @@
                     <h3 class="advantages-title">Настоящий городок</h3>
                     <p class="advantage-order">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                   </div>
-                  <figure class="advantage-illustration">
-                    <img class="illustration" src="images/advantages/advantage-1.jpg" alt="Вид на городок" width="800"
-                      height="384">
-                  </figure>
+                  <img class="illustration" src="images/advantages/advantage-1.jpg" alt="Вид на городок." width="800"
+                    height="384">
                 </div>
                 <ul class="advantages-sublist">
                   <li class="advantages-item">
                     <div class="container-item">
-                      <img class="advantages-subitem-icon" src="images/advantages/accommodation-icon.svg" alt="О жилье"
+                      <img class="advantages-subitem-icon" src="images/advantages/accommodation-icon.svg" alt="О жилье."
                         width="76" height="73">
                       <h3 class="advantages-title">Жильё</h3>
                       <!-- К сожалению, без двух <br> ниже, не попадает в pixexperfect. Да и не подряд они, а разделены текстом :) -->
@@ -80,7 +78,7 @@
                   </li>
                   <li class="advantages-item">
                     <div class="container-item">
-                      <img class="advantages-subitem-icon" src="images/advantages/food-icon.svg" alt="О еде" width="75"
+                      <img class="advantages-subitem-icon" src="images/advantages/food-icon.svg" alt="О еде." width="75"
                         height="71">
                       <h3 class="advantages-title">Еда</h3>
                       <p>
@@ -91,7 +89,7 @@
                   </li>
                   <li class="advantages-item">
                     <div class="container-item">
-                      <img class="advantages-subitem-icon" src="images/advantages/souvenirs-icon.svg" alt="О сувенирах"
+                      <img class="advantages-subitem-icon" src="images/advantages/souvenirs-icon.svg" alt="О сувенирах."
                         width="65" height="77">
                       <h3 class="advantages-title">Сувениры</h3>
                       <p>
@@ -106,10 +104,8 @@
                   <h3 class="advantages-title">Там есть<br>мост дьявола</h3>
                   <p class="advantage-order">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
                 </div>
-                <figure class="advantage-illustration advantage-illustration-2">
-                  <img class="illustration" src="images/advantages/advantage-2.jpg"
-                    alt="Завораживающий вид на Мост Дьявола" width="800" height="384">
-                </figure>
+                <img class="illustration davils-bridge" src="images/advantages/advantage-2.jpg"
+                  alt="Завораживающий вид на Мост Дьявола." width="800" height="384">
               </li>
               <li class="advantages-item">
                 <div class="container-item">
@@ -117,7 +113,7 @@
                   <p class="advantage-order">Все достопримечательности находятся очень близко</p>
                 </div>
               </li>
-              <li class="advantages-item advantages-item-4">
+              <li class="advantages-item">
                 <div class="container-item">
                   <h3 class="advantages-title">Красивая<br>дорога</h3>
                   <p class="advantage-order">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
@@ -136,7 +132,8 @@
               <h2 class="search-title">Заинтересовались?</h2>
               <p class="search-paragraph">
                 Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
-                предложения гостиниц в Седоне
+                предложения гостиниц в Седоне&nbsp;&nbsp;&nbsp;
+                <!-- неразрывный пробел немного исправляет "косяк" макета, чтобы по pixelperfect сошлось -->
               </p>
               <a class="button hotel-search-button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
             </div>
@@ -217,7 +214,7 @@
     <!-- Чтобы включить мадальное окно, в styles.css надо у .modal-container-close убрать display: none;-->
     <div class="modal-container modal-container-close">
       <div class="modal">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
           <svg class="cross" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -232,31 +229,33 @@
               <label class="search-label" for="check-in-date">Дата Заезда:</label>
               <input class="field check-in-field" type="text" id="check-in-date" name="check-in-date"
                 placeholder="Укажите дату" value="27 апреля 2020">
+              <button class="calendar" type="button"></button>
             </p>
             <p class="field-group check-out">
               <label class="search-label" for="check-out-date">Дата Выезда:</label>
               <input class="field check-out-field" type="text" id="check-out-date" name="check-out-date"
                 placeholder="Укажите дату" value="1 сентября 2021">
+              <button class="calendar" type="button"></button>
             </p>
             <div class="guest-category">
               <p class="field-group group-adults">
                 <label class="search-label" for="adults">Взрослые:</label>
-                <button class="minus minus-adults"></button>
+                <button class="minus minus-adults" type="button"></button>
                 <input class="field quantity" type="number" id="adults" name="adults" value="2">
-                <button class="plus plus-adults"></button>
+                <button class="plus plus-adults" type="button"></button>
               </p>
               <p class="field-group group-children">
                 <label class="search-label" for="children">Дети:</label>
                 <span class="tooltip">
-                  <button class="tooltip-toggle" aria-labelledby="tooltip-label"></button>
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label"></button>
                   <span class="tooltip-text" role="tooltip" id="tooltip-label">
                     Укажите количество детей, которые будут с вами, возраст которых от 6 до
                     18 лет. Дети до 6 лет размещаются бесплатно.
                   </span>
                 </span>
-                <button class="minus minus-children"></button>
+                <button class="minus minus-children" type="button"></button>
                 <input class="field quantity" type="number" id="children" name="children" value="1">
-                <button class="plus plus-children"></button>
+                <button class="plus plus-children" type="button"></button>
               </p>
             </div>
             <button class="button search-form-button" type="submit">Найти</button>
