@@ -133,7 +133,8 @@
               <h2 class="search-title">Заинтересовались?</h2>
               <p class="search-paragraph">
                 Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
-                предложения гостиниц в Седоне
+                предложения гостиниц в Седоне&nbsp;&nbsp;&nbsp;
+                <!-- неразрывный пробел немного исправляет "косяк" макета, чтобы по pixelperfect сошлось -->
               </p>
               <a class="button hotel-search-button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
             </div>
@@ -229,11 +230,13 @@
               <label class="search-label" for="check-in-date">Дата Заезда:</label>
               <input class="field check-in-field" type="text" id="check-in-date" name="check-in-date"
                 placeholder="Укажите дату" value="27 апреля 2020">
+              <button class="calendar" type="button"></button>
             </p>
             <p class="field-group check-out">
               <label class="search-label" for="check-out-date">Дата Выезда:</label>
               <input class="field check-out-field" type="text" id="check-out-date" name="check-out-date"
                 placeholder="Укажите дату" value="1 сентября 2021">
+              <button class="calendar" type="button"></button>
             </p>
             <div class="guest-category">
               <p class="field-group group-adults">
