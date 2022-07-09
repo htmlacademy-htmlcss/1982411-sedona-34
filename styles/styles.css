@@ -382,7 +382,7 @@ body {
 
 .illustration {
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .advantages-item-special p {
@@ -1474,10 +1474,10 @@ body {
 }
 
 .button-reset {
-  transform: translateY(13px);
+  transform: translateY(16px);
   min-width: 0;
-  width: 100px;
-  padding: 12px 19px;
+  width: 160px;
+  padding: 14px 15px;
   grid-row: 3/ 4;
   align-self: end;
   justify-self: center;
