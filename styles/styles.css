@@ -1587,7 +1587,7 @@ body {
 }
 
 .filter-results-view {
-  min-width: 156px;
+  width: 160px;
   display: flex;
   flex-wrap: wrap;
   align-self: flex-end;
