@@ -275,7 +275,7 @@ body {
   background-image: url("../images/index-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #83B3D3;
+  background-color: #778899;
 }
 
 .welcome-image::after {
@@ -382,7 +382,7 @@ body {
 
 .illustration {
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .advantages-item-special p {
@@ -442,9 +442,9 @@ body {
   color: #ffffff;
   text-align: center;
   background-image: url("../images/subcribtion-background-index.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: #83B3D3;
+  background-color: #778899;
 }
 
 .catalog-newsletters-subscribtion {
@@ -1051,13 +1051,13 @@ body {
   flex-direction: column;
   padding-top: 35px;
   padding-right: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 63px;
   padding-left: 70px;
   margin: 0 auto;
   color: #ffffff;
-  background-color: #83B3D3;
+  background-color: #778899;
   background-image: url("../images/catalog/catalog-background.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -1143,6 +1143,7 @@ body {
   padding: 0;
   display: grid;
   grid-template-rows: auto auto;
+  align-items: start;
   border: none;
 }
 
@@ -1378,7 +1379,7 @@ body {
   margin: 0;
 }
 
-.catalog-flter-label {
+.catalog-filter-label {
   align-self: center;
   font-family: inherit;
   font-size: 18px;
@@ -1448,13 +1449,13 @@ body {
 .filter-buttons {
   display: grid;
   grid-template-columns: 160px;
-  grid-template-rows: 60px 48px 40px;
+  grid-template-rows: 60px auto auto;
 }
 
 .button-apply {
   padding: 14px 15px;
   grid-row: 2 / 3;
-  align-self: end;
+  align-self: start;
   box-sizing: border-box;
   background-color: #82b3d3;
   overflow-wrap: break-word;
@@ -1474,15 +1475,16 @@ body {
 }
 
 .button-reset {
-  transform: translateY(16px);
+  transform: translateY(8px);
   min-width: 0;
   width: 160px;
   padding: 14px 15px;
   grid-row: 3/ 4;
-  align-self: end;
+  align-self: start;
   justify-self: center;
   font-weight: 400;
   text-transform: capitalize;
+  overflow-wrap: break-word;
   background-color: transparent;
   box-sizing: border-box;
 }
@@ -1643,7 +1645,7 @@ body {
   position: relative;
   width: 1056px;
   margin: 0 auto;
-  margin-bottom: 96px;
+  margin-bottom: 84px;
   padding: 0;
   display: grid;
   grid-template-columns: 340px 340px 340px;
@@ -1788,11 +1790,11 @@ body {
 
 .pagination-container {
   width: 1056px;
-  height: 60px;
+  min-height: 60px;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .pagination {
@@ -1801,21 +1803,18 @@ body {
   margin-right: 270px;
   padding: 0;
   padding-bottom: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  column-gap: 8px;
   list-style-type: none;
 }
 
 .pagination-item {
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   margin-top: 10px;
   text-align: center;
-}
-
-.pagination-item:not(:nth-child(6n)) {
-  margin-right: 8px;
+  align-self: center;
 }
 
 .pagination-link {
@@ -1829,6 +1828,7 @@ body {
   line-height: 36px;
   text-decoration: none;
   text-transform: uppercase;
+  overflow-wrap: break-word;
   color: #ffffff;
   background-color: #82b3d3;
   border-radius: 4px;
@@ -1870,6 +1870,7 @@ body {
   min-width: 386px;
   min-height: 49px;
   display: flex;
+  align-self: center;
 }
 
 .control-label-bottom {
