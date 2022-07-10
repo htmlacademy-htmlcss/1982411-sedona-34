@@ -1449,7 +1449,7 @@ body {
 .filter-buttons {
   display: grid;
   grid-template-columns: 160px;
-  grid-template-rows: 60px auto auto;
+  grid-template-rows: 60px auto 1fr;
 }
 
 .button-apply {
